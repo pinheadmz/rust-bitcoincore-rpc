@@ -34,7 +34,9 @@ bitcoind -regtest $BLOCKFILTERARG $FALLBACKFEEARG \
     -rpcport=12349 \
     -server=1 \
     -txindex=1 \
-    -printtoconsole=0 \
+    -printtoconsole=1 \
+    -debug=http \
+    -debug=rpc \
     -zmqpubrawblock=tcp://0.0.0.0:28332 \
     -zmqpubrawtx=tcp://0.0.0.0:28333 &
 PID2=$!
